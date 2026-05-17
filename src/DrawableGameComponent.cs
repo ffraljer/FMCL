@@ -142,7 +142,7 @@ namespace Microsoft.Xna.Framework
 
 		#region Public Virtual Methods
 
-		public virtual void Draw(GameTime gameTime)
+		public virtual void Draw()
 		{
 		}
 

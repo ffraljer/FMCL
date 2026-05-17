@@ -7,6 +7,8 @@
  */
 #endregion
 
+using Microsoft.Xna.Framework.Graphics;
+
 namespace Microsoft.Xna.Framework.Content
 {
 	internal class ColorReader : ContentTypeReader<Color>

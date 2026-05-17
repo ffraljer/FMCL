@@ -1,13 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>net5.0-windows;net6.0-windows;net7.0-windows;net8.0-windows;net9.0-windows;net10.0-windows</TargetFrameworks>
+		<UseWindowsForms>True</UseWindowsForms>
 	</PropertyGroup>
 	<PropertyGroup>
 		<EnableDefaultItems>false</EnableDefaultItems>
 		<AssemblyName>FNA</AssemblyName>
 		<RootNamespace>Microsoft.Xna.Framework</RootNamespace>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<LangVersion>14.0</LangVersion>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <NoWarn>$(NoWarn);CA1416</NoWarn>
 	</PropertyGroup>
 	<PropertyGroup>
 		<FNASettingsPropsFilePath>$(SolutionDir)FNA.Settings.props</FNASettingsPropsFilePath>
@@ -40,7 +43,9 @@
 		<Compile Include="src\BoundingBox.cs" />
 		<Compile Include="src\BoundingFrustum.cs" />
 		<Compile Include="src\BoundingSphere.cs" />
-		<Compile Include="src\Color.cs" />
+		<Compile Include="src\GameClock.cs" />
+		<Compile Include="src\GameHost.cs" />
+		<Compile Include="src\Graphics\Color.cs" />
 		<Compile Include="src\ContainmentType.cs" />
 		<Compile Include="src\Content\ContentExtensions.cs" />
 		<Compile Include="src\Content\ContentLoadException.cs" />
@@ -143,7 +148,6 @@
 		<Compile Include="src\GameComponentCollection.cs" />
 		<Compile Include="src\GameComponentCollectionEventArgs.cs" />
 		<Compile Include="src\GameServiceContainer.cs" />
-		<Compile Include="src\GameTime.cs" />
 		<Compile Include="src\GameWindow.cs" />
 		<Compile Include="src\Graphics\ClearOptions.cs" />
 		<Compile Include="src\Graphics\ColorWriteChannels.cs" />
@@ -274,6 +278,7 @@
 		<Compile Include="src\IDrawable.cs" />
 		<Compile Include="src\IGameComponent.cs" />
 		<Compile Include="src\IGraphicsDeviceManager.cs" />
+		<Compile Include="src\IHeavyUpdatable.cs" />
 		<Compile Include="src\Input\Buttons.cs" />
 		<Compile Include="src\Input\ButtonState.cs" />
 		<Compile Include="src\Input\GamePad.cs" />
@@ -361,6 +366,8 @@
 		<Compile Include="lib\FAudio\csharp\FAudio.cs" />
 		<Compile Include="lib\Theorafile\csharp\Theorafile.cs" />
 		<Compile Include="lib\dav1dfile\csharp\dav1dfile.Legacy.cs" />
+		<Compile Include="src\WindowManager.cs" />
+		<Compile Include="src\xNativeMethods.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="app.config" />

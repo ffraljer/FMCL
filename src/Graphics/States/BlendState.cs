@@ -7,6 +7,8 @@
  */
 #endregion
 
+
+
 namespace Microsoft.Xna.Framework.Graphics
 {
 	public class BlendState : GraphicsResource

@@ -16,6 +16,15 @@ using System.Runtime.InteropServices;
 
 namespace Microsoft.Xna.Framework.Graphics
 {
+	/*
+	 * sadly, you'll need to decompile your old shaders for it to even work here,
+	 * and I can't even get decompilation to work!
+	 * I had to feed bytecode to AI multiple times, and obviously, they aren't accurate,
+	 * but hey, at least it's something!
+	 */
+	/*
+	 no changes were made to this file (other than these comments.)
+	 */
 	public class Effect : GraphicsResource
 	{
 		#region Public Properties

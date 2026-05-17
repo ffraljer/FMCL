@@ -282,6 +282,8 @@ namespace Microsoft.Xna.Framework
 		#endregion
 
 		#region Public Static Methods
+		public delegate GameWindow CreateWindowFromHandleFunc(IntPtr hwnd);
+		public static readonly CreateWindowFromHandleFunc CreateWindowFromHandle;
 
 		/* Technically this should be IntPtr, but oh well... */
 		public delegate IntPtr MallocFunc(int size);

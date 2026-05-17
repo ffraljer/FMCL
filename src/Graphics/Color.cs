@@ -16,12 +16,11 @@ using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Text;
-
 using Microsoft.Xna.Framework.Design;
 using Microsoft.Xna.Framework.Graphics.PackedVector;
 #endregion
 
-namespace Microsoft.Xna.Framework
+namespace Microsoft.Xna.Framework.Graphics // also for compatibility with clients
 {
 	/// <summary>
 	/// Describes a 32-bit packed color.
@@ -128,7 +127,16 @@ namespace Microsoft.Xna.Framework
 		/// <summary>
 		/// Transparent color (R:0,G:0,B:0,A:0).
 		/// </summary>
-		public static Color Transparent
+		public static Color TransparentBlack
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
+		/// Transparent color (R:255,G:255,B:255,A:0).
+		/// </summary>
+		public static Color TransparentWhite
 		{
 			get;
 			private set;
@@ -1422,7 +1430,8 @@ namespace Microsoft.Xna.Framework
 
 		static Color()
 		{
-			Transparent = new Color(0);
+			TransparentBlack = new Color(0);
+			TransparentWhite = new Color(255, 255, 255, 0);
 			AliceBlue = new Color(0xfffff8f0);
 			AntiqueWhite = new Color(0xffd7ebfa);
 			Aqua = new Color(0xffffff00);

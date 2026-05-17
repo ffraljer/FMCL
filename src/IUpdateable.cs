@@ -38,7 +38,7 @@ namespace Microsoft.Xna.Framework
 
 		#region Methods
 
-		void Update(GameTime gameTime);
+		void Update();
 
 		#endregion
 	}

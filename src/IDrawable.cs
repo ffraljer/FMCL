@@ -28,6 +28,6 @@ namespace Microsoft.Xna.Framework
 		event EventHandler<EventArgs> DrawOrderChanged;
 		event EventHandler<EventArgs> VisibleChanged;
 
-		void Draw(GameTime gameTime);
+		void Draw();
 	}
 }
